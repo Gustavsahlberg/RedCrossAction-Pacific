@@ -18,8 +18,35 @@ To check if Django is installed run this command:
 $ python3 -m django --version
 ```
 
+### Windows
+
+To setup the workspace in Windows you will need to do the following:
+1) Install Python 3.8.5.
+2) Run `setup.bat` in the projects root directory
+
+### Linux
+
+To setup the workspace in Linux you will need to run the following command in your terminal:
+```bash
+$ ./setup.sh
+```
+
+
 ## Server
+
+### Windows
+
+Run the following command in the root directory to start the server:
+```
+./run.bat
+```
+
+
+### Linux
+
 To start our server run this following command:
 ```
-$ python3 manage.py runserver
+$ ./run.sh
 ```
+
+Both files can take an optional argument for the port number to run the server on. The port `8080` will be used if no port number is specified.
