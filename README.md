@@ -44,9 +44,11 @@ Run the following command in the root directory to start the server:
 
 ### Linux
 
-To start our server run this following command:
+Run the following command to start our server:
 ```
 $ ./run.sh
 ```
 
-Both files can take an optional argument for the port number to run the server on. The port `8080` will be used if no port number is specified.
+Both files can take an optional argument for the port number to run the server on. The port `8000` will be used if no port number is specified.
+
+### These files are mainly for development purposes and shouldn't be used in production.
