@@ -25,12 +25,20 @@ SECRET_KEY = '^guj)ih5*m_9x=r1%amf4_#*4w+ug2dh#43+y2ui091zyb4%kb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'no0846106@gmail.com'
+EMAIL_HOST_PASSWORD = 'GPTD2001'
+EMAIL_PORT = 587
+
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'volunteer.apps.VolunteerConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
