@@ -1,0 +1,8 @@
+{{ message }}
+
+<form method="post" action="{% url 'answer' %}">
+    {% csrf_token %}
+    <input type="button" name="answer" value="1">Yes</input>
+    <input type="button" name="answer" value="0">No</input>
+    <input type="submit" />
+</form>
