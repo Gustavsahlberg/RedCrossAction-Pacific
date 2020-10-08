@@ -2,7 +2,18 @@
 
 <form method="post" action="{% url 'index' %}">
     {% csrf_token %}
-    <input name="reciever" placeholder="example@example.com" type="email"><br><br>
-    <textarea name="message" placeholder="Message..."></textarea><br>
-    <input type="Submit"/>
+    {% comment %} <input name="reciever" placeholder="example1@example.com" type="email"><br><br>
+    <input name="reciever2" placeholder="example2@example.com" type="email"><br><br> {% endcomment %}
+    <textarea name="message" placeholder="Message..." cols="100" rows="20"></textarea><br><br>
+    <input type="Submit" value="Send"/>
 </form>
+
+{% if latest_mail %}
+    <ul>
+    {% for mail in latest_mail %}
+        {{ mail.mail_address }}<br>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No mails are available.</p>
+{% endif %}
