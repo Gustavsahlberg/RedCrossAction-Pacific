@@ -1,9 +1,8 @@
-<h3>Mail for help</h3>
+<h3>Send mail to volunteers</h3>
+<p>Write a message you would like to mail to these addresses below.</p>
 
 <form method="post" action="{% url 'index' %}">
     {% csrf_token %}
-    {% comment %} <input name="reciever" placeholder="example1@example.com" type="email"><br><br>
-    <input name="reciever2" placeholder="example2@example.com" type="email"><br><br> {% endcomment %}
     <textarea name="message" placeholder="Message..." cols="100" rows="20"></textarea><br><br>
     <input type="Submit" value="Send"/>
 </form>

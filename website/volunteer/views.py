@@ -15,7 +15,7 @@ def index(request):
         for mail in AddMail.objects.all():
             recievers.append(mail.mail_address)
 
-        send_mail('Mail for help', message, settings.EMAIL_HOST_USER, recievers)
+        send_mail('Volunteer needed', message, settings.EMAIL_HOST_USER, recievers)
     latest_mail = AddMail.objects.order_by('-pub_date')
     context = {'latest_mail': latest_mail}
     return render(request, 'volunteer/index.html', context)
